@@ -40,26 +40,26 @@ STEPS I HAVE DONE TO REBUILD A NEW CORE
 =======================================
 
 1)
-# Fork C64MEGA65 project from https://github.com/MJoergen/C64MEGA65/ to your own GitHub repository.
-# - Make sure to uncheck the "Copy the master branch only", as we need the "M2M-V0.9" tag also.
+Fork C64MEGA65 project from https://github.com/MJoergen/C64MEGA65/ to your own GitHub repository.
+  - Make sure to uncheck the "Copy the master branch only", as we need the "M2M-V0.9" tag also.
 
 2)
-# Clone the GitHub repository to local computer - it will create the parent folder.
-# (replace with your GitHub repository)
+Clone the GitHub repository to local computer - it will create the parent folder.
+(replace with your GitHub repository)
   - git clone https://github.com/HovKlan-DH/C64MEGA65
   - cd C64MEGA65
 
 3)
-# The current default forked repository does not support Vivado 2022.2, but the "M2M-V0.9" tag does.
-# (this is why we need to fork the entire repository and not only the master branch)
+The current default forked repository does not support Vivado 2022.2, but the "M2M-V0.9" tag does.
+(this is why we need to fork the entire repository and not only the master branch)
   - git checkout M2M-V0.9
 
 4)
-# Update with the required sub-modules (will fetch from their sources).
+Update with the required sub-modules (will fetch from their sources).
   - git submodule update --init --recursive
 
 5)
-# Build the toolchains (quote from @sy2002):
+Build the toolchains (quote from @sy2002):
   - cd M2M/QNICE/tools
   - ./make-toolchain.sh
     - Answer all questions by pressing ENTER
@@ -71,7 +71,7 @@ STEPS I HAVE DONE TO REBUILD A NEW CORE
     - -rw-r--r--  1 sy2002  staff  237594 16 Mär 12:30 m2m-rom.out
 
 6)
-# Do a trial-build in Vivado - just to validate that everything is working from real source.
+Do a trial-build in Vivado - just to validate that everything is working from real source.
   - cd ..
   - /root/Xilinx/Vivado/2022.2/bin/vivado
     - Open Project and choose the CORE-R3.xpr file.
@@ -82,7 +82,7 @@ STEPS I HAVE DONE TO REBUILD A NEW CORE
       - CORE/CORE-R3.runs/impl_1/CORE_R3.bit
 
 7)
-# With strong reference to [MiSTer2MEGA65 First Steps](https://github.com/sy2002/MiSTer2MEGA65/wiki/2.-First-Steps) and my own personal implementation in [MyFirstM2M](https://github.com/HovKlan-DH/MyFirstM2M) then copy/adapt files in the new C64MEGA65 project:
+With strong reference to [MiSTer2MEGA65 First Steps](https://github.com/sy2002/MiSTer2MEGA65/wiki/2.-First-Steps) and my own personal implementation in [MyFirstM2M](https://github.com/HovKlan-DH/MyFirstM2M) then copy/adapt files in the new C64MEGA65 project:
   - Copy my modified raw text font to M2M\font\Anikki-16x16-MegaBeauvais.txt
   - Copy Anikki C-file and replace text inside to new font name
     - cd ../M2M/font
@@ -102,31 +102,31 @@ STEPS I HAVE DONE TO REBUILD A NEW CORE
       - constant OPTM_GROUPS
 
 8)
-# Unpack PSFTools that will be used for font handling:
+Unpack PSFTools that will be used for font handling:
   - cd ../M2M/font
   - tar -zxvf psftools-1.1.1.tar.gz
 
 9)
-# Fix txt2psf bug in txt2psf.c and replace line 180 (read M2M\font\README.txt) and then compile it:
+Fix txt2psf bug in txt2psf.c and replace line 180 (read M2M\font\README.txt) and then compile it:
   - cd psftools-1.1.1
   - sed -i 's/strcpy(linebuf, c);/memmove(linebuf, c, 1 + strlen(c));/g' tools/txt2psf.c
   - ./configure
   - make
 
 10)
-# Compile a new font with script:
+Compile a new font with script:
   - cd ../../..
   - ./build_font.sh
 
 11)
-# Compile a new bitstream (requires "bit2core").
-# Make sure to EXIT Vivado once it has completed a successful bitstream.
+Compile a new bitstream (requires "bit2core").
+Make sure to EXIT Vivado once it has completed a successful bitstream.
   - ./build_bitstream.sh
     - After successful build, you will have the BIT and COR files here:
       - CORE/CORE-R3.runs/impl_1/CORE_R3.bit
       - CORE/m2m.cor
-# Note - I have disabled the push to the MEGA65, as this setup is so special (+ requires a JTAG adaptor), that you need to do your own setup.
-# View in "push_bitstream_to_mega65.sh" what happens in there.
+Note - I have disabled the push to the MEGA65, as this setup is so special (+ requires a JTAG adaptor), that you need to do your own setup.
+View in "push_bitstream_to_mega65.sh" what happens in there.
 
 12)
-# Now repeat from step 11, until you are happy with the result :-)
+Now repeat from step 11, until you are happy with the result :-)
