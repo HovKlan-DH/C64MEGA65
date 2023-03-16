@@ -136,36 +136,36 @@ With strong reference to [MiSTer2MEGA65 First Steps](https://github.com/sy2002/M
 **Step 8**
 
 Unpack PSFTools that will be used for font handling:
-  - cd ../M2M/font
-  - tar -zxvf psftools-1.1.1.tar.gz
+  - `cd ../M2M/font`
+  - `tar -zxvf psftools-1.1.1.tar.gz`
 
 
 **Step 9**
 
-Fix txt2psf bug in txt2psf.c and replace line 180 (read M2M\font\README.txt) and then compile it:
-  - cd psftools-1.1.1
-  - sed -i 's/strcpy(linebuf, c);/memmove(linebuf, c, 1 + strlen(c));/g' tools/txt2psf.c
-  - ./configure
-  - make
+Fix bug in `txt2psf.c` and replace line 180 (read `M2M\font\README.md`) and then compile it:
+  - `cd psftools-1.1.1`
+  - `sed -i 's/strcpy(linebuf, c);/memmove(linebuf, c, 1 + strlen(c));/g' tools/txt2psf.c`
+  - `./configure`
+  - `make`
 
 
 **Step 10**
 
 Compile a new font with script:
-  - cd ../../..
-  - ./build_font.sh
+  - `cd ../../..`
+  - `./build_font.sh`
 
 
 **Step 11**
 
-Compile a new bitstream (requires "bit2core").
+Compile a new bitstream (requires `bit2core`).
 Make sure to EXIT Vivado once it has completed a successful bitstream.
-  - ./build_bitstream.sh
+  - `./build_bitstream.sh`
     - After successful build, you will have the BIT and COR files here:
-      - CORE/CORE-R3.runs/impl_1/CORE_R3.bit
-      - CORE/m2m.cor
+      - `CORE/CORE-R3.runs/impl_1/CORE_R3.bit`
+      - `CORE/m2m.cor`
 Note - I have disabled the push to the MEGA65, as this setup is so special (+ requires a JTAG adaptor), that you need to do your own setup.
-View in "push_bitstream_to_mega65.sh" what happens in there.
+View in `push_bitstream_to_mega65.sh` what happens in there.
 
 
 **That's it**
