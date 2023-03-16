@@ -45,6 +45,11 @@ I am basically only using these commands frequently:
   - `git push` to push changes from local to GitHub
   - `gh auth login` to reauth login to GitHub (remembers credentials) - use access token
 
+**Replace `c64mega65` configuration save-file on SD card**
+
+If you use this core, then you must replace your `c64mega65` file in the `\c64` folder of your SD card.
+You should replace it with the file in `M2M\tools\c64mega65`.
+
 
 STEPS I HAVE DONE TO REBUILD A NEW CORE
 =======================================
