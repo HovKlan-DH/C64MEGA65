@@ -1,9 +1,9 @@
-Commodore 64 for MEGA65 - version 4
-===================================
+Commodore 64 for MEGA65 version 4
+=================================
 
-This project is copied directly from the Commodore 64 for [MEGA65 project](https://github.com/MJoergen/C64MEGA65) and is fully done by [sy2002](https://github.com/sy2002) and [MJoergen](https://github.com/MJoergen).
+This project is copied directly from the [Commodore 64 for MEGA65 project](https://github.com/MJoergen/C64MEGA65) and is fully done by [sy2002](https://github.com/sy2002) and [MJoergen](https://github.com/MJoergen).
 
-My purpose here is solely to **tweak the help menu**, to reflect my wishes for an improvement - that means different **colors**, **layout** and **font** - that's it. The core itself will not be touched at all, as I have no idea what this is doing :-)
+My purpose here is solely to **tweak the help menu**, to reflect my wishes for an improvement - that means different **colors**, **layout** and **font** - that's it. The core itself will not be touched at all, and I have even no idea what this is doing :-)
 
 I will update with the steps I have done and how it looks like.
 
@@ -14,24 +14,26 @@ I will update with the steps I have done and how it looks like.
 
 REQUIREMENTS BEFORE YOU START
 =============================
-# Xilinx Vivado ML Standard 2022.2 proper setup (the Standard version is free to use).
-# - For me it took some effort in getting this to work proper, but sadly I did not document everything I did - maybe it is working better for you.
-# - I have my Vivado installed in Ubuntu 22.04 in Subsystem for Linux on my Windows 10.
-# m65tools - can be fetched from https://github.com/MEGA65/mega65-tools
-#   - You need to use these two tools:
-#   - bit2core
-#   - m65
-# Basic GitHub understanding (I am by far no expert, so basic understanding is fine).
-# I am basically only using these commands frequently:
-# - git clone https://github.com/xyz... : clone repository from GitHub to local
-# - git status              : check differences between local and GitHub
-# - git add file.txt            : add local file to repository
-# - git add -A              : add ALL files to repository
-# - git rm file.txt           : delete file from GitHub
-# - git pull                : do this before push, to make sure you have all newest from GitHub
-# - git commit -a -m "Initial tweaks"   : add all files and create short description for specific commit
-# - git push                : push changes from local to GitHub
-# - gh auth login             : reauth login to GitHub (remembers credentials) - use access token
+
+Xilinx Vivado ML Standard 2022.2 proper setup (the Standard version is free to use).
+  - For me it took some effort in getting this to work proper, but sadly I did not document everything I did - maybe it is working better for you.
+  - I have my Vivado installed in Ubuntu 22.04 in Subsystem for Linux on my Windows 10.
+  - m65tools and can be fetched from https://github.com/MEGA65/mega65-tools
+  - You need to use these two tools:
+    - bit2core
+    - m65
+
+Basic GitHub understanding (I am by far no expert, so basic understanding is fine).
+I am basically only using these commands frequently:
+  - git clone https://github.com/xyz... : clone repository from GitHub to local
+  - git status              : check differences between local and GitHub
+  - git add file.txt            : add local file to repository
+  - git add -A              : add ALL files to repository
+  - git rm file.txt           : delete file from GitHub
+  - git pull                : do this before push, to make sure you have all newest from GitHub
+  - git commit -a -m "Initial tweaks"   : add all files and create short description for specific commit
+  - git push                : push changes from local to GitHub
+  - gh auth login             : reauth login to GitHub (remembers credentials) - use access token
 
 
 STEPS I HAVE DONE TO REBUILD A NEW CORE
