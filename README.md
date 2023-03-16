@@ -8,7 +8,7 @@ My purpose here is solely to **tweak the help menu**, to reflect my wishes for a
 I will update with the steps I have done and how it looks like.
 
                   ------------------------------------------------------------------------------------------
-                                            ALL THE CREDIT GOES TO SY2002 AND MJOERGEN !! :-)
+                                            ALL THE CREDIT GOES TO SY2002 AND MJOERGEN !!
                   ------------------------------------------------------------------------------------------
 
 This is the **original** menu:
