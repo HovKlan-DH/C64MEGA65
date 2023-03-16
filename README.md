@@ -171,3 +171,8 @@ View in `push_bitstream_to_mega65.sh` what happens in there.
 **That's it**
 
 Now repeat from step 11, until you are happy with the result :-)
+
+
+**Push your local changes to GitHub**
+
+Due to the `git checkout M2M-V0.9` in one of the first steps, then it is not possible to do a normal `git commit` and `git push`, but you will need to use Google to figure this out, as this was too weird for me to understand. I finally did manage to get my branch merged with the `master` branch, and then suddenly life is easy again ;-)
