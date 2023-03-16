@@ -39,12 +39,10 @@ I am basically only using these commands frequently:
 STEPS I HAVE DONE TO REBUILD A NEW CORE
 =======================================
 
-(1)
-Fork C64MEGA65 project from https://github.com/MJoergen/C64MEGA65/ to your own GitHub repository.
+(1) Fork C64MEGA65 project from https://github.com/MJoergen/C64MEGA65/ to your own GitHub repository.
   - Make sure to uncheck the "Copy the master branch only", as we need the "M2M-V0.9" tag also.
 
-2)
-Clone the GitHub repository to local computer - it will create the parent folder.
+(2) Clone the GitHub repository to local computer - it will create the parent folder.
 (replace with your GitHub repository)
   - git clone https://github.com/HovKlan-DH/C64MEGA65
   - cd C64MEGA65
