@@ -381,34 +381,35 @@ constant OPTM_ITEMS        : string :=
    "\n"                       &
    " About & Help\n";
         
---constant OPTM_G_MOUNT_8       : integer := 1;
---constant OPTM_G_MOUNT_9       : integer := 2;   -- not used, yet; each drive needs a unique group ID
---constant OPTM_G_FLIP_JOYS     : integer := 3;
---constant OPTM_G_SID           : integer := 4;
---constant OPTM_G_REU           : integer := 5;
---constant OPTM_G_CRT_EMULATION : integer := 6;
---constant OPTM_G_HDMI_ZOOM     : integer := 7;
---constant OPTM_G_HDMI_MODES    : integer := 8;
---constant OPTM_G_HDMI_FF       : integer := 9;
---constant OPTM_G_HDMI_DVI      : integer := 10;
---constant OPTM_G_VGA_RETRO     : integer := 11;
---constant OPTM_G_CIA_8521      : integer := 12;
---constant OPTM_G_IMPROVE_AUDIO : integer := 13;
---constant OPTM_G_ABOUT_HELP    : integer := 14;
 constant OPTM_G_MOUNT_8       : integer := 1;
 constant OPTM_G_MOUNT_9       : integer := 2;   -- not used, yet; each drive needs a unique group ID
-constant OPTM_G_SID           : integer := 3;
-constant OPTM_G_REU           : integer := 4;
-constant OPTM_G_VGA_RETRO     : integer := 5;
+constant OPTM_G_FLIP_JOYS     : integer := 3;
+constant OPTM_G_SID           : integer := 4;
+constant OPTM_G_REU           : integer := 5;
 constant OPTM_G_CRT_EMULATION : integer := 6;
-constant OPTM_G_HDMI_FF       : integer := 7;
-constant OPTM_G_HDMI_ZOOM     : integer := 8;
-constant OPTM_G_HDMI_MODES    : integer := 9;
+constant OPTM_G_HDMI_ZOOM     : integer := 7;
+constant OPTM_G_HDMI_MODES    : integer := 8;
+constant OPTM_G_HDMI_FF       : integer := 9;
 constant OPTM_G_HDMI_DVI      : integer := 10;
-constant OPTM_G_IMPROVE_AUDIO : integer := 11;
+constant OPTM_G_VGA_RETRO     : integer := 11;
 constant OPTM_G_CIA_8521      : integer := 12;
-constant OPTM_G_FLIP_JOYS     : integer := 13;
+constant OPTM_G_IMPROVE_AUDIO : integer := 13;
 constant OPTM_G_ABOUT_HELP    : integer := 14;
+
+--constant OPTM_G_MOUNT_8       : integer := 1;
+--constant OPTM_G_MOUNT_9       : integer := 2;   -- not used, yet; each drive needs a unique group ID
+--constant OPTM_G_SID           : integer := 3;
+--constant OPTM_G_REU           : integer := 4;
+--constant OPTM_G_VGA_RETRO     : integer := 5;
+--constant OPTM_G_CRT_EMULATION : integer := 6;
+--constant OPTM_G_HDMI_FF       : integer := 7;
+--constant OPTM_G_HDMI_ZOOM     : integer := 8;
+--constant OPTM_G_HDMI_MODES    : integer := 9;
+--constant OPTM_G_HDMI_DVI      : integer := 10;
+--constant OPTM_G_IMPROVE_AUDIO : integer := 11;
+--constant OPTM_G_CIA_8521      : integer := 12;
+--constant OPTM_G_FLIP_JOYS     : integer := 13;
+--constant OPTM_G_ABOUT_HELP    : integer := 14;
 
 type OPTM_GTYPE is array (0 to OPTM_SIZE - 1) of integer range 0 to 65535;
 constant OPTM_GROUPS       : OPTM_GTYPE := ( OPTM_G_HEADLINE,
