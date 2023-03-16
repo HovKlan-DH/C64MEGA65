@@ -39,7 +39,7 @@ I am basically only using these commands frequently:
 STEPS I HAVE DONE TO REBUILD A NEW CORE
 =======================================
 
-1)
+(1)
 Fork C64MEGA65 project from https://github.com/MJoergen/C64MEGA65/ to your own GitHub repository.
   - Make sure to uncheck the "Copy the master branch only", as we need the "M2M-V0.9" tag also.
 
@@ -100,6 +100,22 @@ With strong reference to [MiSTer2MEGA65 First Steps](https://github.com/sy2002/M
       - constant OPTM_DX
       - constant OPTM_ITEMS
       - constant OPTM_GROUPS
+  - Adapt my modified CORE\vhdl\mega65.vhd to to CORE\vhdl\mega65.vhd
+    - I changed these:
+      - constant C_MENU_FLIP_JOYS
+      - constant C_MENU_8580
+      - constant C_MENU_REU
+      - constant C_MENU_CRT_EMULATION
+      - constant C_MENU_HDMI_ZOOM
+      - constant C_MENU_HDMI_16_9_50
+      - constant C_MENU_HDMI_16_9_60
+      - constant C_MENU_HDMI_4_3_50
+      - constant C_MENU_HDMI_5_4_50
+      - constant C_MENU_HDMI_FF
+      - constant C_MENU_HDMI_DVI
+      - constant C_MENU_VGA_RETRO
+      - constant C_MENU_8521
+      - constant C_MENU_IMPROVE_AUDIO
 
 8)
 Unpack PSFTools that will be used for font handling:
