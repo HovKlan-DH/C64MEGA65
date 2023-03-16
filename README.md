@@ -13,7 +13,11 @@ I will update with the steps I have done and how it looks like.
 
 This is the **original** menu:
 
+![Original menu](http://howto.dk/MiSTer2MEGA65-Color-Schema/org1.jpg)
+
 This is my **tweaked** menu:
+
+![Tweaked menu](http://howto.dk/MiSTer2MEGA65-Color-Schema/tweaked1.jpg)
 
 
 REQUIREMENTS BEFORE YOU START
