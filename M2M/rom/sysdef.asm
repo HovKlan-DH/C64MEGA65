@@ -83,28 +83,48 @@ M2M$SA_FG_GREEN     .EQU 0x02
 M2M$SA_FG_BLUE      .EQU 0x01
 
 ; Screen attributes: Common bit-combinations
-M2M$SA_COL_STD      .EQU 0x0B   ; cyan font on blue background
-M2M$SA_COL_STD_INV  .EQU 0x8B   ; inverse standard
-M2M$SA_COL_TTLE     .EQU 0x0E   ; Title: Yellow on blue background
-M2M$SA_COL_TTLE_INV .EQU 0x8E   ; inverse Title
-M2M$SA_COL_SEL      .EQU 0x0F   ; selection: white font on blue background
+;M2M$SA_COL_STD      .EQU 0x0B   ; cyan font on blue background
+;M2M$SA_COL_STD_INV  .EQU 0x8B   ; inverse standard
+;M2M$SA_COL_TTLE     .EQU 0x0E   ; Title: Yellow on blue background
+;M2M$SA_COL_TTLE_INV .EQU 0x8E   ; inverse Title
+;M2M$SA_COL_SEL      .EQU 0x0F   ; selection: white font on blue background
+M2M$SA_COL_STD       .EQU 0x47   ; Default menu: DARK WHITE text on BLACK background
+M2M$SA_COL_STD_INV   .EQU 0x78   ; Cursor line: BLACK text on DARK WHITE background
+M2M$SA_COL_TTLE      .EQU 0x46   ; Title: DARK YELLOW text on BLACK background
+M2M$SA_COL_TTLE_INV  .EQU 0x16   ; Title, inversed: YELLOW text on GREEN background - ??? where is this used ??? color will catch my eye
+M2M$SA_COL_SEL       .EQU 0x96   ; Selection: GREEN text on YELLOW background - ??? where is this used ??? color will catch my eye
 
 ; Special characters in font Anikki-16x16
-M2M$FC_TL           .EQU 201    ; fat top/left corner
-M2M$FC_SH           .EQU 205    ; fat straight horizontal
-M2M$FC_TR           .EQU 187    ; fat top/right corner
-M2M$FC_SV           .EQU 186    ; fat straight vertical
-M2M$FC_BL           .EQU 200    ; fat bottom/left corner
-M2M$FC_BR           .EQU 188    ; fat bottom/right corner
-M2M$FC_HE_LEFT      .EQU 185    ; fat straight horiz. line ends: left part
-M2M$FC_HE_RIGHT     .EQU 204    ; fat straight horiz. line ends: right part
-M2M$NC_SH           .EQU 196    ; normal straight horizontal
-M2M$NC_VE_LEFT      .EQU 199    ; normal vertical line end: left part
-M2M$NC_VE_RIGHT     .EQU 182    ; normal vertical line end: right part
-M2M$DIR_L           .EQU 17     ; left char for displaying a directory
-M2M$DIR_R           .EQU 16     ; right char for displaying a directory
-M2M$OPT_SEL_MULTI   .EQU 7      ; selection char for options menu: multi-sel.
-M2M$OPT_SEL_SINGLE  .EQU 61     ; ditto for single select
+;M2M$FC_TL           .EQU 201    ; fat top/left corner
+;M2M$FC_SH           .EQU 205    ; fat straight horizontal
+;M2M$FC_TR           .EQU 187    ; fat top/right corner
+;M2M$FC_SV           .EQU 186    ; fat straight vertical
+;M2M$FC_BL           .EQU 200    ; fat bottom/left corner
+;M2M$FC_BR           .EQU 188    ; fat bottom/right corner
+;M2M$FC_HE_LEFT      .EQU 185    ; fat straight horiz. line ends: left part
+;M2M$FC_HE_RIGHT     .EQU 204    ; fat straight horiz. line ends: right part
+;M2M$NC_SH           .EQU 196    ; normal straight horizontal
+;M2M$NC_VE_LEFT      .EQU 199    ; normal vertical line end: left part
+;M2M$NC_VE_RIGHT     .EQU 182    ; normal vertical line end: right part
+;M2M$DIR_L           .EQU 17     ; left char for displaying a directory
+;M2M$DIR_R           .EQU 16     ; right char for displaying a directory
+;M2M$OPT_SEL_MULTI   .EQU 7      ; selection char for options menu: multi-sel.
+;M2M$OPT_SEL_SINGLE  .EQU 61     ; ditto for single select
+M2M$FC_TL           .EQU 201     ; frame, top left corner (double)
+M2M$FC_TR           .EQU 187     ; frame, top right corner (double)
+M2M$FC_BL           .EQU 200     ; frame, bottom left corner (double)
+M2M$FC_BR           .EQU 188     ; frame, bottom right corner (double)
+M2M$FC_SH           .EQU 205     ; frame, top/bottom, straight horizontal (double)
+M2M$FC_SV           .EQU 186     ; frame, straight vertical (double)
+M2M$NC_VE_LEFT      .EQU 199     ; frame, separator, left vertical with horizontal line end (double)
+M2M$NC_VE_RIGHT     .EQU 182     ; frame, separator, right vertical with horizontal line end (double)
+M2M$NC_SH           .EQU 196     ; frame, separator, straight horizontal
+M2M$FC_HE_LEFT      .EQU 3       ; frame, left side, vertical line with horizontal in middle - ??? WHERE IS THIS USED ???
+M2M$FC_HE_RIGHT     .EQU 4       ; frame, right side, vertical line with horizontal in middle - ??? WHERE IS THIS USED ???
+M2M$DIR_L           .EQU 60      ; left char for displaying a directory
+M2M$DIR_R           .EQU 62      ; right char for displaying a directory
+M2M$OPT_SEL_MULTI   .EQU 7       ; selection char for toggle-select
+M2M$OPT_SEL_SINGLE  .EQU 251     ; selection char for single-select
 
 ; ----------------------------------------------------------------------------
 ; HDMI: Avalon Scaler (ascal.vhd)
