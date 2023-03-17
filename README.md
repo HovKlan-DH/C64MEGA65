@@ -26,25 +26,12 @@ REQUIREMENTS BEFORE YOU START
 
   - For me it took some effort in getting this to work proper, but sadly I did not document everything I did - maybe it is working better for you.
   - I have my Vivado installed in Ubuntu 22.04 in Subsystem for Linux on my Windows 10.
-  - m65tools and can be fetched from https://github.com/MEGA65/mega65-tools
+  - `m65tools` which can be fetched from https://github.com/MEGA65/mega65-tools
   - You optionally need to use these two tools:
     - `bit2core` needed for converting a BIT file to a COR file
     - `m65` is optional and for a direct transfer of a BIT file to the MEGA65
 
-**Basic GitHub understanding**
-
-I am basically only using these commands frequently:
-  - `git clone https://github.com/xyz...` to clone repository from GitHub to local
-  - `git status` to check differences between local and GitHub
-  - `git add file.txt` to add one local file to repository
-  - `git add -A` to add ALL files to repository
-  - `git rm file.txt` to delete file from GitHub
-  - `git pull` - you should do this before push, to make sure you have all newest from GitHub
-  - `git commit -a -m "Initial tweaks"` to add all files and create short description for specific commit
-  - `git push` to push changes from local to GitHub
-  - `gh auth login` to reauth login to GitHub (remembers credentials) - use access token
-
-**Replace `c64mega65` configuration save-file on SD card**
+**Replace `c64mega65` configuration file on SD card**
 
 If you use this core, then you must replace your `c64mega65` file in the `\c64` folder of your SD card.
 You should replace it with the file in `M2M\tools\c64mega65`.
