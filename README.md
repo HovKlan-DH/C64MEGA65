@@ -5,22 +5,29 @@ This project is copied directly from the [Commodore 64 for MEGA65 project](https
 
 My purpose here is solely to **tweak the help menu**, to reflect my wishes for an improvement - that means different **colors**, **layout** and **font** - that's it. The core itself is not touched at all, and I have even no idea how this is working :-)
 
-    ------------------------------------------------------------------------------------------
-                         ALL THE CREDIT GOES TO SY2002 AND MJOERGEN !!
-    ------------------------------------------------------------------------------------------
+    ------------------------------------------
+    ALL THE CREDIT GOES TO SY2002 AND MJOERGEN
+    ------------------------------------------
 
-This is the **original** menu:
+This is how the **original** menu looks like:
 
 ![Original menu](http://howto.dk/MiSTer2MEGA65-Color-Schema/org1.jpg)
 
-This is my **tweaked** menu:
+This is how my **tweaked** menu looks like:
 
 ![Tweaked menu](http://howto.dk/MiSTer2MEGA65-Color-Schema/tweaked1.jpg)
 
 If you would like to tweak this yourself, then you could find inspiration in my below documented steps. You are also welcome to reach out to me on [Discord MEGA65](https://discord.com/channels/719326990221574164/), where I have the strange handle as **MegaBeauvais#9623**
 
-REQUIREMENTS BEFORE YOU START
-=============================
+You could also just head to the [RELEASES](https://github.com/HovKlan-DH/C64MEGA65/releases) and do a quick download - ready to go for your MEGA65 :-)
+
+
+REQUIREMENTS BEFORE YOU START YOUR OWN TWEAKING
+===============================================
+
+**Familiarize yourself with the MiSTer2MEGA65 project**
+
+  - It is highly recommended that you first follow the steps in this excellent guide, [MiSTer2MEGA65 First Steps](https://github.com/sy2002/MiSTer2MEGA65/wiki/2.-First-Steps), for how to use the MiSTer2MEGA65 framework
 
 **Xilinx Vivado ML Standard 2022.2 proper setup** (the Standard version is free to use)
 
@@ -31,18 +38,13 @@ REQUIREMENTS BEFORE YOU START
     - `bit2core` needed for converting a BIT file to a COR file
     - `m65` is optional and for a direct transfer of a BIT file to the MEGA65
 
-**Replace `c64mega65` configuration file on SD card**
-
-If you use this core, then you must replace your `c64mega65` file in the `\c64` folder of your SD card.
-You should replace it with the file in `M2M\tools\c64mega65`.
-
 
 STEPS I HAVE DONE TO REBUILD A NEW TWEAKED CORE
 ===============================================
 
 **Step 1**
 
-Fork C64MEGA65 project from https://github.com/MJoergen/C64MEGA65/ to your own GitHub repository.
+Fork the C64MEGA65 project from https://github.com/MJoergen/C64MEGA65/ to your own GitHub repository.
   - Make sure to uncheck the `Copy the master branch only`, as we need the `M2M-V0.9` tag also from the source repository.
 
 
@@ -56,7 +58,7 @@ Clone the GitHub repository to local computer - it will create the parent folder
 
 **Step 3**
 
-The current default forked repository does not support Vivado 2022.2, but the `M2M-V0.9` tag does.
+The current default forked repository from the C64MEGA65 project currently does not support Vivado 2022.2, but the `M2M-V0.9` tag does.
 (this is why we need to fork the entire repository and not only the master branch)
   - `git checkout M2M-V0.9`
 
@@ -96,7 +98,7 @@ Do a trial-build in Vivado - just to validate that everything is working from re
 
 **Step 7**
 
-With strong reference to [MiSTer2MEGA65 First Steps](https://github.com/sy2002/MiSTer2MEGA65/wiki/2.-First-Steps) and my own personal implementation in [MyFirstM2M](https://github.com/HovKlan-DH/MyFirstM2M) then copy/adapt files in the new C64MEGA65 project:
+Adapt my previous modified files and learnings from my [MyFirstM2M](https://github.com/HovKlan-DH/MyFirstM2M) project:
   - Copy my modified raw text font to `M2M\font\Anikki-16x16-MegaBeauvais.txt`
   - Copy Anikki C-file and replace text inside to new font name
     - `cd ../M2M/font`
@@ -157,19 +159,27 @@ Compile a new font with script:
 
 **Step 11**
 
+Compile a new configuration save-file for your SD card.
+This file must be placed in the `\c64` folder in the root of the SD card.
+You must get the size of `OPTM_SIZE` in the file `CORE/vhdl/config.vhd`, and in the below then `27` is the value I have in the `OPTM_SIZE`
+  - `cd M2M/tools`
+  - `./make_config.sh c64mega65-mb 27`
+
+**Step 12**
+
 Compile a new bitstream (requires `bit2core`).
 Make sure to EXIT Vivado once it has completed a successful bitstream.
   - `./build_bitstream.sh`
     - After successful build, you will have the BIT and COR files here:
       - `CORE/CORE-R3.runs/impl_1/CORE_R3.bit`
-      - `CORE/m2m.cor`
-Note - I have disabled the push to the MEGA65, as this setup is so special (+ requires a JTAG adaptor), that you need to do your own setup.
+      - `CORE/C64V4MB.COR`
+Note - I have disabled the push to the MEGA65, as this setup is so special on my setup (+ requires a JTAG adaptor), that you need to do your own setup.
 View in `push_bitstream_to_mega65.sh` what happens in there.
 
 
 **That's it**
 
-Now repeat from step 11, until you are happy with the result :-)
+Now repeat from step 12, until you are happy with the result :-)
 
 
 **Push your local changes to GitHub**
