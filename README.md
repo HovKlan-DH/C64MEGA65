@@ -180,6 +180,7 @@ View in `push_bitstream_to_mega65.sh` what happens in there.
 **That's it**
 
 Now repeat from step 12, until you are happy with the result :-)
+You should copy the file `C64V4MB.COR` to the root of your SD card, and then do a core flash on the MEGA65.
 
 
 **Push your local changes to GitHub**
