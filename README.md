@@ -37,8 +37,8 @@ If you use this core, then you must replace your `c64mega65` file in the `\c64` 
 You should replace it with the file in `M2M\tools\c64mega65`.
 
 
-STEPS I HAVE DONE TO REBUILD A NEW CORE
-=======================================
+STEPS I HAVE DONE TO REBUILD A NEW TWEAKED CORE
+===============================================
 
 **Step 1**
 
