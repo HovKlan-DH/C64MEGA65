@@ -5,11 +5,9 @@ This project is copied directly from the [Commodore 64 for MEGA65 project](https
 
 My purpose here is solely to **tweak the help menu**, to reflect my wishes for an improvement - that means different **colors**, **layout** and **font** - that's it. The core itself is not touched at all, and I have even no idea how this is working :-)
 
-I will update with the steps I have done and how it looks like.
-
-                  ------------------------------------------------------------------------------------------
-                                            ALL THE CREDIT GOES TO SY2002 AND MJOERGEN !!
-                  ------------------------------------------------------------------------------------------
+    ------------------------------------------------------------------------------------------
+                         ALL THE CREDIT GOES TO SY2002 AND MJOERGEN !!
+    ------------------------------------------------------------------------------------------
 
 This is the **original** menu:
 
@@ -19,6 +17,7 @@ This is my **tweaked** menu:
 
 ![Tweaked menu](http://howto.dk/MiSTer2MEGA65-Color-Schema/tweaked1.jpg)
 
+If you would like to tweak this yourself, then you could find inspiration in my below documented steps. You are also welcome to reach out to me on [Discord MEGA65](https://discord.com/channels/719326990221574164/), where I have the strange handle as **MegaBeauvais#9623**
 
 REQUIREMENTS BEFORE YOU START
 =============================
